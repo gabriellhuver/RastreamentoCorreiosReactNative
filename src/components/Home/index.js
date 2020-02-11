@@ -3,7 +3,7 @@ import Rastrear from '../Rastrear'
 import Rastreios from '../Rastreios'
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { NavigationNativeContainer } from '@react-navigation/native'
+import { NavigationContainer } from '@react-navigation/native'
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const RastrearIcon = <Icon name="search" size={24} color="gray" />;
@@ -13,7 +13,7 @@ const Tab = createBottomTabNavigator();
 
 export default function Home() {
   return (
-    <NavigationNativeContainer>
+    <NavigationContainer>
       <Tab.Navigator initialRouteName="Rastreios">
         <Tab.Screen name="Rastrear" options={{
           tabBarIcon: ({ color, size }) => (
@@ -27,6 +27,6 @@ export default function Home() {
         }} component={Rastreios} />
 
       </Tab.Navigator>
-    </NavigationNativeContainer>
+    </NavigationContainer>
   );
 }
